@@ -1,0 +1,10 @@
+body {
+  background-color: #ccc;
+}
+
+.pokemon-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

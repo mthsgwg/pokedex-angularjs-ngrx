@@ -1,1 +1,9 @@
-<h1>{{ pokemon.name }}</h1>
+<div class="pokemon-card" [ngStyle]="cardStyles">
+  <img
+    [src]="pokemon.pokemonsprites?.[0]?.sprites?.front_default"
+    class="pokemon-sprite"
+    [alt]="pokemon.name"
+  />
+  <h3 [ngStyle]="titleStyles">{{ pokemon.name }}</h3>
+  <p [ngStyle]="subtitleStyles">{{ pokemon.pokemontypes?.[0]?.type?.name }}</p>
+</div>

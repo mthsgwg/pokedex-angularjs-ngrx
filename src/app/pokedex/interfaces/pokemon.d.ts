@@ -6,11 +6,11 @@ interface BaseEntity {
 export interface Pokemon extends BaseEntity {
   name: string;
   pokemontypes: PokemonType[];
-  pokemonSprites: PokemonSprite[];
+  pokemonsprites: PokemonSprite[];
 }
 
 interface PokemonType extends BaseEntity {
-  type: Type[];
+  type: Type;
 }
 
 interface Type extends BaseEntity {
