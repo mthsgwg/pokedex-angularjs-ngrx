@@ -9,7 +9,7 @@ import { ObservableQuery } from '@apollo/client';
 
 const FIND_ALL_POKEMON: TypedDocumentNode<{ pokemon: Pokemon[] }> = gql`
   query MyQuery {
-    pokemon(offset: 0, limit: 10) {
+    pokemon(offset: 0, limit: 20) {
       name
       id
       pokemontypes {

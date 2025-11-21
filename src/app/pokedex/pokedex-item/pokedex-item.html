@@ -4,6 +4,6 @@
     class="pokemon-sprite"
     [alt]="pokemon.name"
   />
-  <h3 [ngStyle]="titleStyles">{{ pokemon.name }}</h3>
+  <h3 [ngStyle]="titleStyles">{{ pokemon.name | capitalize }}</h3>
   <p [ngStyle]="subtitleStyles">{{ pokemon.pokemontypes?.[0]?.type?.name }}</p>
 </div>

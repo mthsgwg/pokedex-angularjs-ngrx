@@ -2,10 +2,11 @@ import { italic } from './../../../../node_modules/@colors/colors/index.d';
 import { Component, Input, OnInit } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { Pokemon } from '../interfaces/pokemon';
+import { CapitalizeNamePipe } from './capitalize-name.pipe';
 
 @Component({
   selector: 'pokedex-item',
-  imports: [NgStyle],
+  imports: [NgStyle, CapitalizeNamePipe],
   templateUrl: './pokedex-item.html',
   styleUrl: './pokedex-item.scss',
 })
