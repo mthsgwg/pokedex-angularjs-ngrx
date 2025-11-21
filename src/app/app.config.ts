@@ -1,7 +1,8 @@
 import {
   ApplicationConfig,
   provideBrowserGlobalErrorListeners,
-  provideZoneChangeDetection, inject,
+  provideZoneChangeDetection,
+  inject,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
@@ -17,12 +18,14 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideClientHydration(withEventReplay()), provideHttpClient(), provideApollo(() => {
+    provideClientHydration(withEventReplay()),
+    provideHttpClient(),
+    provideApollo(() => {
       const httpLink = inject(HttpLink);
 
       return {
         link: httpLink.create({
-          uri: '<%= endpoint %>',
+          uri: 'https://graphql.pokeapi.co/v1beta2',
         }),
         cache: new InMemoryCache(),
       };

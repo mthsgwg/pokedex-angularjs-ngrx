@@ -9,27 +9,4 @@ import { Pokedex } from './pokedex/pokedex';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App implements OnInit {
-  protected readonly title = signal('pokedex-angularjs-ngrx');
-  protected readonly name = signal('Matheus');
-
-  public myForm!: FormGroup;
-
-  ngOnInit(): void {
-    this.myForm = new FormGroup({
-      myFormControl: new FormControl(''),
-    });
-  }
-
-  changeName() {
-    this.name.set('Novo Nome');
-  }
-
-  onSubmit() {
-    console.log('Form Control Value', this.myForm?.get('myFormControl')?.value);
-  }
-
-  onChange(event: Event) {
-    this.name.set((event.target as HTMLInputElement).value);
-  }
-}
+export class App {}
